@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Directory</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">
+                <i class="fas fa-users"></i>
+                User Directory
+            </h1>
+            <p class="subtitle">Discover amazing people from around the world</p>
+            <button id="reloadBtn" class="reload-btn">
+                <i class="fas fa-sync-alt"></i>
+                Reload Data
+            </button>
+        </header>
+
+        <div id="loadingSpinner" class="loading-spinner">
+            <div class="spinner"></div>
+            <p>Loading users...</p>
+        </div>
+
+        <div id="errorMessage" class="error-message">
+            <i class="fas fa-exclamation-triangle"></i>
+            <h3>Oops! Something went wrong</h3>
+            <p id="errorText"></p>
+            <button id="retryBtn" class="retry-btn">
+                <i class="fas fa-redo"></i>
+                Try Again
+            </button>
+        </div>
+
+        <div id="userContainer" class="user-container">
+            <!-- User cards will be dynamically inserted here -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
